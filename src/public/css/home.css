@@ -1,0 +1,231 @@
+#home {
+	background-color: var(--blue-bg);
+}
+
+.slideshow__container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 60px;
+	margin-bottom: 24px;
+	position: relative;
+	transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+}
+
+.slideshow__blur, .slideshow__darker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.slideshow__blur {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.66);
+	filter: blur(12px);
+	-webkit-filter: blur(40px);
+	z-index: -2;
+	height: calc(120%);
+}
+
+.slideshow__darker {
+	background-color: rgb(0 0 0 / 50%);
+	z-index: -1;
+	height: 120%;
+	filter: blur(12px);
+}
+
+.slideshow {
+    z-index: 8;
+	max-width: 840px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.slideshow__controls {
+	z-index: 3;
+	padding: 12px 0;
+}
+
+.slideshow__current {
+	width: 100%;
+	height: 0;
+	padding-bottom: 40%;
+	background-size: cover;
+	transition: all 1s ease-in-out;
+
+	transition-delay: 1s;
+}
+
+.slideshow__control--next,
+.slideshow__control--prev {
+	position: absolute;
+	top: 50%;
+	height: 60px;
+	width: 36px;
+	transform: translateY(-50%);
+}
+
+.slideshow button {
+	background: rgba(255, 255, 255, 0);
+	color: #fff;
+	border: none;
+}
+
+.slideshow button:hover {
+	background: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+}
+
+.slideshow__control--prev {
+	left: 0;
+}
+
+.slideshow__control--next {
+	right: 0;
+}
+
+.controls--buttons{
+	height: 4px;
+	width: 20px;
+	background: rgba(255, 255, 255, 0.45);
+	padding: 0;
+	border: none;
+	margin: 0 2px;
+}
+
+.controls--buttons:hover {
+	cursor: pointer;
+}
+
+.controls--buttons.active {
+	background: #ffffff;
+}
+
+.slideshow__controls .controls__buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20px;
+}
+
+
+/* start css for list song*/
+
+.list__songs .song {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	height: 100%;
+	width: 100%;
+	margin: 0.4rem;
+}
+
+.list__songs .song .song__img {
+	width: 60px;
+	height: 60px;
+	position: relative;
+}
+
+.list__songs .song .song__img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+.song__img .song--play,
+.song__img .wave--icon{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.3rem;
+	display: none;
+}
+
+.song:hover {
+	cursor: pointer;
+}
+
+.song:active {
+	cursor: auto;
+}
+
+.song:hover img.song__img--src{
+	filter: brightness(50%);
+}
+
+.active--current .wave--icon {
+	display: block;
+}
+
+.song:hover i {
+	display: block;
+}
+
+.list__songs .song .song__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.list__songs {
+	color: #fff;
+}
+
+.song__info--name h5,
+.song__info--artist p {
+	padding: 0;
+	margin: 0;
+}
+
+.song__info--name h5 {
+	font-size: 1rem;
+}
+
+.song__info--artist p {
+	font-size: 0.8rem;
+	color: #fff;
+}
+
+.song__img:active {
+
+}
+
+.box {
+	height: fit-content;
+	border: 1px solid #000;
+}
+
+/*end css for list song*/
+
+
+/* ------------start css for song card slider*/
+@media (max-width: 768px) {
+	.carousel-inner .carousel-item > div {
+		display: none;
+	}
+	.carousel-inner .carousel-item > div:first-child {
+		display: block;
+	}
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+	display: flex;
+}
+
+/* display 3 */
+/* ------------start css for song card slider*/

@@ -1,0 +1,31 @@
+@import url("src/public/css/style.css");
+#home_library{
+	background: #0B1220;
+}
+
+.card-body{
+	height:100px;
+	font-size: small;
+	color: white;
+	font-weight: 700;
+}
+.card{
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.card-img-top{
+	padding: 8px;
+}
+
+.navbar-expand{
+	padding-left: 0;
+}
+
+
+
+
+
+
+
+
+

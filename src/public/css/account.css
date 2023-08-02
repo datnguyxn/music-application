@@ -1,0 +1,139 @@
+#account {
+    background-color: var(--blue-bg);
+}
+
+#account .header {
+    position: relative;
+}
+
+#info {
+    background-color: #408490;
+    padding: 24px 0;
+}
+
+.info__img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info__img {
+    margin: 0 24px 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.info__img i {
+    position: absolute;
+    font-size: 36px;
+    color: var(--white);
+    display: none;
+    z-index: 13;
+}
+
+.info__img:hover i {
+    display: block;
+}
+
+.info__img:hover img {
+    opacity: 0.5;
+}
+
+.info__text > * {
+    margin-bottom: 0;
+}
+
+.info__text p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.info__text h1 {
+    font-size: 36px;
+}
+
+.info__text .text--inline {
+    display: inline;
+}
+.button__playlist {
+    display: block;
+    margin-top: 1rem;
+    color: var(--white);
+    font-weight: 500;
+    border-color: var(--white);
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow:none;
+}
+
+.button__playlist:hover {
+    background-color: var(--blue-sb);
+    border-color: var(--blue-sb);
+}
+
+.info__text .button__playlist:active {
+    background-color: var(--blue-sb);
+    border-color: var(--blue-sb);
+    box-shadow: none;
+}
+
+.info__text .button__playlist:focus {
+    box-shadow: none;
+}
+
+#liked_artists .albums__list .album__item p{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#myModal .avatar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#myModal .avatar-container i {
+    position: absolute;
+    color: #000;
+    display: none;
+    z-index: 22;
+}
+
+#myModal .avatar-container:hover i {
+    display: block;
+}
+
+#myModal .avatar-container:hover img{
+    opacity: 0.5;
+}
+
+.avatar-container input {
+    cursor: pointer;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    /*This makes the button huge. If you want a bigger button, increase the font size*/
+    font-size:50px;
+    /*Opacity settings for all browsers*/
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+}
+
+#myModal .avatar-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
